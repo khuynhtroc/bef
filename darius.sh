@@ -2,4 +2,4 @@
 
 msg=$1
 
-git pull && git add . && git commit -m "Kelly: update $msg" && git push
+git pull && git add . && git commit -m "Darius: update $msg" && git push
