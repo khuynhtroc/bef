@@ -6,14 +6,15 @@ description: "Giữ bình tĩnh khi tranh luận quả là một việc không d
 meta-title: "9 lời khuyên hữu ích kiềm chế bực tức khi tranh luận"
 meta-description: "Giữ bình tĩnh khi tranh luận quả là một việc không dễ dàng chút nào! Tuy nhiên, bạn nên cố gắng kiểm soát tâm trạng bởi khi nóng giận, sự việc, mâu thuẫn có xu hướng trở nên gay gắt và bất lợi hơn. Một số lời khuyên sau có thể giúp bạn tích luỹ thêm kinh nghiệm giao tiếp cho bản thân."
 meta-keywords: "lời khuyên khi bực tức, bực tức khi tranh luận, kìm nén cơn giận"
-categories: Kĩ Năng Mềm
+categories: blog
 topic:
 topic-lable: "Kĩ Năng Mềm"
 permalink: "/9-loi-khuyen-huu-ich-kiem-che-buc-tuc-khi-tranh-luan.html"
-tag: ki-nang-mem
+tags: ki-nang-mem
 screenshots:
 rating: 99
 review_count: 2
+published: true
 
 ---
 
