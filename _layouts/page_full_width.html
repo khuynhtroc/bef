@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% include head.html %}
+</head>
+
+<body>
+{% include _after_body.html %}
+
+<!-- Navigation -->
+{% include nav.html %}
+
+<!-- Page breadcrumb -->
+<nav>
+<div class="nav-wrapper container" id="breadcrumb-wrapper">
+  <div class="col s12 m12 l12">
+    <a href="{{ site.url }}" class="breadcrumb">Home</a>
+    <a class="breadcrumb">{{ page.title }}</a>
+  </div>
+</div>
+</nav>
+
+
+<!-- Page Content -->
+{{ content }}
+
+
+
+
+<!-- Footer -->
+{% include footer.html %}
+
+{% include _before_body_end.html %}
+
+</body>
+
+</html>

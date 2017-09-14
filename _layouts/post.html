@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% include head.html %}
+</head>
+
+<body>
+{% include _after_body.html %}
+<!-- Navigation -->
+{% include nav.html %}
+
+
+<!-- Page breadcrumb -->
+<nav>
+<div class="nav-wrapper container" id="breadcrumb-wrapper">
+  <div class="col s12 m12 l12">
+    <a href="{{ site.url }}" class="breadcrumb">Home</a>
+    <a href="{{ site.url }}/blog/" class="breadcrumb">Blog</a>
+    <a class="breadcrumb">{{ page.title }}</a>
+  </div>
+</div>
+</nav>
+
+<!-- <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "{{ site.url }}",
+      "name": "Home"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "{{ site.url }}/blog/",
+      "name": "Blog"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "{{ site.url }}/{{ page.url }}",
+      "name": "{{ page.title }}"
+    }
+  }]
+}
+</script> -->
+
+<!-- Page Content -->
+  <div class="container">
+    <div class="section">
+
+		<!-- Content -->
+    	<div class="row" id="page-content">
+	        <div class="col s12">
+	        <h1 class="header">{% if(page.h1-title) %}{{ page.h1-title }}{% else %}{{ page.title }}{% endif %}</h1>
+
+	          <div class="card">
+	          	{% if(page.image) %}
+	            <div class="card-image">
+	              <img src="{{ page.image }}">
+	              <span class="card-title">{{ page.title }}</span>
+	            </div>
+	            {% endif %}
+
+	            
+
+
+	            <div class="card-content">
+	              {{ content }}
+	            </div>
+
+
+	            <div class="card-action">
+
+
+		              {% include ask_for_sharing.html %}
+
+	              
+	            	<p>{% include social-buttons_kb.html %}</p>
+
+					<p class="tag-list">
+		              	{% for tag in page.tags %}
+							<div class="chip">{{ tag }}</div>
+						{% endfor %}
+	              	</p>
+
+
+
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+		
+
+        <!-- Comments -->
+		<div class="row" id="comment-section">
+			<h2 class="header" id="header-comments">Comments for {{ page.title }}</h2>
+			<div class="col s12 m12">
+				<div class="card">
+					<div class="card-content">
+
+					<p class="card-title">Please leave comments if you have any questions, feedbacks.</p>
+					
+					{% include disqus.html %}
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Related -->
+		{% if (page.topic) %}
+		<div class="row">
+			<ul class="collection with-header">
+		    	<li class="collection-header"><h3 class="header"><a href="{{ site.url }}/blog/{{ page.topic }}">{{ page.topic-label }}</a></h3></li>
+
+		      {% for post in site.categories.blog | sort: 'date'  %}
+		      	{% if(page.topic == post.topic)  %}
+		        <li class="collection-item avatar">
+		        	<i class="material-icons circle green">insert_chart</i>
+		        	<span class="title">
+		          	<a href="{{ site.url }}{{ post.url }}" >
+		    	        {{ post.title }}
+		            </a>
+		          </span>
+		          
+		        </li>
+		        {% endif %}
+
+		      {% endfor %}
+
+		  </ul>
+
+
+		</div>
+		{% endif %}
+
+		<!-- End Related -->
+
+		<!-- Recent posts -->
+		<div class="row">
+			<ul class="collection with-header">
+		    	<li class="collection-header"><a href="{{ site.url }}/blog/">Recent blog posts</a></li>
+
+		      {% for post in site.categories.blog limit:10 | sort: 'date'  %}
+		        <li class="collection-item avatar">
+		        	<i class="material-icons circle green">insert_chart</i>
+		        	<span class="title">
+		          	<a href="{{ site.url }}{{ post.url }}" >
+		    	        {{ post.title }}
+		            </a>
+		          </span>
+		          
+		        </li>
+
+		      {% endfor %}
+
+		  </ul>
+
+
+		</div>
+
+		<!-- End Recent posts -->
+
+
+
+
+
+
+
+	</div>
+</div>
+
+
+
+<!-- Footer -->
+{% include footer.html %}
+
+{% include _before_body_end.html %}
+
+</body>
+
+</html>
