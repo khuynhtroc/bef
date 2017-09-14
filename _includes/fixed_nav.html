@@ -1,0 +1,55 @@
+<div class="mp-offset-flynav"></div>
+<div class="fly-nav">
+  <nav class="mp-fly-nav" style="display:none">
+    <div class="nav-wrapper container">
+      <a id="mp-logo-flynav" href="{{ site.url }}" class="brand-logo">{{ page.name }}</a>
+      <a href="#" data-activates="mobile-screen" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-small-only">
+        <li><a class="mp-flynav overview" href="#">Overview</a></li>
+        {% if(page.features_url) %}
+        <li><a class="mp-flynav feature" href="{{ page.features_url }}">Features</a></li>
+        {% endif %}
+        {% if(page.has_demo) %}
+        <li><a class="modal-trigger mp-flynav demo" href="#demo-modal">Demo</a></li>
+        {% endif %}
+        {% if(page.screenshots) %}
+        <li><a class="mp-flynav screenshots" href="#screenshots">Screenshots</a></li>
+        {% endif %}
+        {% if(page.has_review) %}
+        <li><a class="mp-flynav screenshots" href="#review-section">Reviews</a></li>
+        {% endif %}
+        {% if(page.faq_url) %}
+        <li><a class="mp-flynav faq" href="#faq-section">FAQ</a></li>
+        {% endif %}
+
+        {% if(page.out_of_stock) %}
+        {% else %}
+        <li><a class="waves-effect waves-light btn btn-large full-width-button green modal-trigger right" href="#add-to-cart"><i class="material-icons left">shopping_cart</i>Add To Cart</a></li>
+        {% endif %}
+      </ul>
+      <ul class="side-nav" id="mobile-screen">
+        <li><a class="mp-flynav overview" href="#">Overview</a></li>
+        {% if(page.features_url) %}
+        <li><a class="mp-flynav feature" href="{{ page.features_url }}">Features</a></li>
+        {% endif %}
+        {% if(page.has_demo) %}
+        <li><a class="modal-trigger mp-flynav demo" href="#demo-modal">Demo</a></li>
+        {% endif %}
+        {% if(page.screenshots) %}
+        <li><a class="mp-flynav screenshots" href="#screenshots">Screenshots</a></li>
+        {% endif %}
+        {% if(page.has_review) %}
+        <li><a class="mp-flynav screenshots" href="#review-section">Reviews</a></li>
+        {% endif %}
+        {% if(page.faq_url) %}
+        <li><a class="mp-flynav faq" href="#faq-section">FAQ</a></li>
+        {% endif %}
+        {% if(page.out_of_stock) %}
+        {% else %}
+        <li><a class="waves-effect waves-light btn btn-large full-width-button green modal-trigger right" href="#add-to-cart"><i class="material-icons left">shopping_cart</i>Add To Cart</a></li>
+        {% endif %}
+      </ul>
+      
+    </div>
+  </nav>
+</div>
