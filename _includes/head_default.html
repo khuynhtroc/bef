@@ -1,0 +1,94 @@
+
+{% if site.google_plus %}
+<!-- Google+ Authorship Information -->
+<link rel="author" href="{{ site.google_plus }}">
+<link rel="publisher" href="{{ site.google_plus }}">
+{% endif %}
+
+<!-- Canonical -->
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% endif %}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:site_name" content="{{ site.name }}">
+
+{% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
+{% if site.bing_verify %}<meta name="msvalidate.01" content="{{ site.bing_verify }}">{% endif %}
+
+{% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
+<link rel="canonical" href="{{ canonical }}">
+<link href="{{ site.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+
+
+
+
+{% if page.allow_search_engine == false %}
+<meta name="robots" content="NOINDEX,NOFOLLOW"/>
+{% endif %}
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta http-equiv="cleartype" content="on">
+
+<link rel="apple-touch-icon" sizes="57x57" href="{{ site.url }}/skin/frontend/mageplaza/default/img/ico/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="{{ site.url }}/skin/frontend/mageplaza/default/img/ico/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ site.url }}/skin/frontend/mageplaza/default/img/ico/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ site.url }}/skin/frontend/mageplaza/default/img/ico/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ site.url }}/skin/frontend/mageplaza/default/img/ico/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ site.url }}/skin/frontend/mageplaza/default/img/ico/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ site.url }}/skin/frontend/mageplaza/default/img/ico/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ site.url }}/skin/frontend/mageplaza/default/img/ico/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/skin/frontend/mageplaza/default/img/ico/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="{{ site.url }}/skin/frontend/mageplaza/default/img/ico/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/skin/frontend/mageplaza/default/img/ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="{{ site.url }}/skin/frontend/mageplaza/default/img/ico/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}/skin/frontend/mageplaza/default/img/ico/favicon-16x16.png">
+<link rel="manifest" href="{{ site.url }}/skin/frontend/mageplaza/default/img/ico/manifest.json">
+<meta name="msapplication-TileColor" content="#0099e5">
+<meta name="msapplication-TileImage" content="{{ site.url }}/skin/frontend/mageplaza/default/img/ico/ms-icon-144x144.png">
+<meta name="theme-color" content="#0099e5">
+
+{% include head_script.html %}
+
+
+
+<!-- CSS  -->
+<!-- <link href="{{ site.url }}/skin/frontend/mageplaza/default/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
+<!-- <link href="{{ site.url }}/skin/frontend/mageplaza/default/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
+
+<link href="{{ site.url }}/skin/frontend/mageplaza/default/css/combine.css?20170717" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
+
+{% if(page.is_landingpage) %}
+
+<!-- <link href="{{ site.url }}/skin/frontend/mageplaza/default/css/combine-landing.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
+<!-- <style src="{{ site.url }}/skin/frontend/mageplaza/default/css/materialapp.css"></style>
+<style src="{{ site.url }}/skin/frontend/mageplaza/default/css/materialapp2.css"></style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> -->
+
+{% endif %}
+
+<script src="{{ site.url }}/skin/frontend/mageplaza/default/js/combine.js?201706252"></script>
+
+<!-- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+<!-- <script src="{{ site.url }}/skin/frontend/mageplaza/default/js/materialize.min.js"></script>
+<script src="{{ site.url }}/skin/frontend/mageplaza/default/js/init.js"></script>
+<script src="{{ site.url }}/skin/frontend/mageplaza/default/js/jquery/jquery.floatThead.min.js"></script>
+<script src="{{ site.url }}/skin/frontend/mageplaza/default/js/jquery/jquery.autocomplete.js"></script> -->
+<!-- <script src="{{ site.url }}/skin/frontend/mageplaza/default/js/owl.carousel.min.js"></script> -->
+
+
+
+{% include _before_head_end.html %}
+

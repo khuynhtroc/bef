@@ -1,0 +1,25 @@
+{% if(page.rating) %}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": "{{ page.title }}",
+  "description": "{{ page.description }}",
+  "sku": "{{ page.title }}",
+  "brand": {
+    "@type": "Thing",
+    "name": "Magento"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ page.rating }}",
+    "reviewCount": "{{ page.review_count }}",
+    "bestRating": "100",
+    "worstRating": "0"
+  }
+ 
+}
+</script>
+
+{% endif %}

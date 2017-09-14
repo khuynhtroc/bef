@@ -1,0 +1,38 @@
+{% assign reviews = (site.data.reviews | where: "sku" , page.sku) %}
+
+{% if (reviews.size == 0) %}
+  {% assign review_count = 3 %}
+{% else %}
+  {% assign review_count = reviews.size %}
+{% endif %}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": "{{ page.title }}",
+  "image": "{{ site.url }}{{ page.small-image }}",
+  "description": "{{ page.description }}",
+  "sku": "{{ page.title }}",
+  "brand": {
+    "@type": "Thing",
+    "name": "Magento"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ page.rating }}",
+    "reviewCount": "{{ review_count }}",
+    "bestRating": "100",
+    "worstRating": "0"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "{{ page.price }}",
+    "availability": "http://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "Mageplaza"
+    }
+  }
+}
+</script>

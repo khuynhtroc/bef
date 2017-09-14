@@ -1,0 +1,276 @@
+
+
+<!-- Essential Features  -->
+<div id="essential-features" class="modal modal-fixed-footer">
+<div class="modal-content">
+  <h4>Essential Features</h4>
+  <p>A bunch of text</p>
+</div>
+<div class="modal-footer">
+  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Got it</a>
+</div>
+</div>
+
+
+<!-- Premium Features  -->
+<div id="premium-features" class="modal modal-fixed-footer">
+<div class="modal-content">
+  <h4>Premium Features</h4>
+  <p>A bunch of text</p>
+</div>
+<div class="modal-footer">
+  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Got it</a>
+</div>
+</div>
+
+
+<!-- Advanced Features  -->
+<div id="advanced-features" class="modal modal-fixed-footer">
+<div class="modal-content">
+  <h4>Advanced Features</h4>
+  <p>A bunch of text</p>
+</div>
+<div class="modal-footer">
+  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Got it</a>
+</div>
+</div>
+
+
+
+
+<!-- Demo  -->
+<div id="landing-demo" class="modal modal-fixed-footer">
+<div class="modal-content">
+  <h3>Demo</h3>
+  <div class="row">
+    <div col s12 m4>  
+      <h5>Ultimate Pack</h5>
+      <p>
+        <a class="waves-effect waves-light btn" target="_blank" href="http://affiliate.m1.mageplaza.com/affiliate/">Frontend</a>
+        <a class="waves-effect waves-light btn" target="_blank" href="http://affiliate.m1.mageplaza.com/admin">Backend</a>
+      </p>
+      
+    </div>
+    <!-- <div col s12 m4>  
+      <h5>Premium Pack</h5>
+      <p>
+        <a class="waves-effect waves-light btn" href="#">Frontend</a>
+        <a class="waves-effect waves-light btn" href="#">Backend</a>
+      </p>
+      
+    </div>
+    <div col s12 m4>  
+      <h5>Basic Pack</h5>
+      <p>
+        <a class="waves-effect waves-light btn" href="#">Frontend</a>
+        <a class="waves-effect waves-light btn" href="#">Backend</a>
+      </p>
+      
+    </div> -->
+
+
+
+    
+  </div>
+</div>
+<div class="modal-footer">
+  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Close</a>
+</div>
+
+</div>
+
+
+
+
+<!-- Add to cart -->
+<div id="add-to-cart-ultimate" class="modal bottom-sheet">
+        <div class="modal-content container">
+            <div class="row">
+                <!-- <h3 class="header center">Ultimate Pack</h3> -->
+                <form action="https://store.mageplaza.com/securecheckout/index/add" id="checkout-form">
+                  <div class="col s12 m6 l6">
+                     <input type="hidden" name="sku" value="m1-affiliate-ultimate" />
+
+                    <h5 style="color: #FF9800;">Affiliate Ultimate Edition</h5>
+                      <p>
+                        <input name="ce" type="radio" id="ce" checked="checked" value="1" />
+                        <label for="ce">Community</label>
+                      </p>
+                      <p>
+                        <input name="ce" type="radio" id="ee" value="0" />
+                        <label for="ee">Enterprise (+ $200)</label>
+                      </p>
+
+                    <p>
+                        <input type="checkbox" class="filled-in" id="installation" name="installation" value="1" />
+                        <label for="installation">Installation Service +50</label>
+                      </p>
+
+
+                  </div>
+
+                  <div class="col s12 m6 l6">
+                    <div id="cart-total">
+                      <h3 class="header">Total: </h3>
+                      <h3 id="grand-total">
+                        ${{ page.price-ultimate }}
+                      </h3>
+                    </div>
+
+                    <p>
+                      <input type="number" class="filled-in col s2" id="item-qty" name="qty" value="1" />
+                      <label for="item-qty" class="col s6">Qty</label>
+                    </p>
+
+                  </div>
+
+                  <div class="row">
+                    <div class="col s12 m6 offset-s6">
+                    {% if(page.out_of_stock) %}
+                      <a href="/" class="waves-effect waves-red btn-large red left">Coming soon!</a>
+                    {% else %}
+                      <input type="submit" name="submit" class="waves-effect waves-green btn-large green left" value="Checkout now">
+                    {% endif %}
+                    </div>
+
+                  </div>
+
+              </form>
+
+            </div>
+                
+          </div>
+      
+
+</div>
+<!-- End add to cart -->
+
+
+
+<!-- Add to cart -->
+<div id="add-to-cart-pro" class="modal bottom-sheet">
+        <div class="modal-content container">
+            <div class="row">
+                <form action="https://store.mageplaza.com/securecheckout/index/add" id="checkout-form">
+                  <div class="col s12 m6 l6">
+                     <input type="hidden" name="sku" value="m1-affiliate-pro" />
+
+                    <h5 style="color: #4CAF50;">Affiliate Pro Edition</h5>
+                      <p>
+                        <input name="ce" type="radio" id="ce" checked="checked" value="1" />
+                        <label for="ce">Community</label>
+                      </p>
+                      <p>
+                        <input name="ce" type="radio" id="ee" value="0" />
+                        <label for="ee">Enterprise (+ $200)</label>
+                      </p>
+
+                    <p>
+                        <input type="checkbox" class="filled-in" id="installation" name="installation" value="1" />
+                        <label for="installation">Installation Service +50</label>
+                      </p>
+
+
+                  </div>
+
+                  <div class="col s12 m6 l6">
+                    <div id="cart-total">
+                      <h3 class="header">Total: </h3>
+                      <h3 id="grand-total">
+                        ${{ page.price-pro }}
+                      </h3>
+                    </div>
+
+                    <p>
+                      <input type="number" class="filled-in col s2" id="item-qty" name="qty" value="1" />
+                      <label for="item-qty" class="col s6">Qty</label>
+                    </p>
+
+                  </div>
+
+                  <div class="row">
+                    <div class="col s12 m6 offset-s6">
+                    {% if(page.out_of_stock) %}
+                      <a href="/" class="waves-effect waves-red btn-large red left">Coming soon!</a>
+                    {% else %}
+                      <input type="submit" name="submit" class="waves-effect waves-green btn-large green left" value="Checkout now">
+                    {% endif %}
+                    </div>
+
+                  </div>
+
+              </form>
+
+            </div>
+                
+          </div>
+      
+
+</div>
+<!-- End add to cart -->
+
+
+
+<!-- Add to cart -->
+<div id="add-to-cart-basic" class="modal bottom-sheet">
+        <div class="modal-content container">
+            <div class="row">
+                <form action="https://store.mageplaza.com/securecheckout/index/add" id="checkout-form">
+                  <div class="col s12 m6 l6">
+                     <input type="hidden" name="sku" value="m1-affiliate-basic" />
+
+                    <h5 style="color: #00BCD4;">Affiliate Basic Edition</h5>
+                      <p>
+                        <input name="ce" type="radio" id="ce" checked="checked" value="1" />
+                        <label for="ce">Community</label>
+                      </p>
+                      <p>
+                        <input name="ce" type="radio" id="ee" value="0" />
+                        <label for="ee">Enterprise (+ $200)</label>
+                      </p>
+
+                    <p>
+                        <input type="checkbox" class="filled-in" id="installation" name="installation" value="1" />
+                        <label for="installation">Installation Service +50</label>
+                      </p>
+
+
+                  </div>
+
+                  <div class="col s12 m6 l6">
+                    <div id="cart-total">
+                      <h3 class="header">Total: </h3>
+                      <h3 id="grand-total">
+                        ${{ page.price-basic }}
+                      </h3>
+                    </div>
+
+                    <p>
+                      <input type="number" class="filled-in col s2" id="item-qty" name="qty" value="1" />
+                      <label for="item-qty" class="col s6">Qty</label>
+                    </p>
+
+                  </div>
+
+                  <div class="row">
+                    <div class="col s12 m6 offset-s6">
+                    {% if(page.out_of_stock) %}
+                      <a href="/" class="waves-effect waves-red btn-large red left">Coming soon!</a>
+                    {% else %}
+                      <input type="submit" name="submit" class="waves-effect waves-green btn-large green left" value="Checkout now">
+                    {% endif %}
+                    </div>
+
+                  </div>
+
+              </form>
+
+            </div>
+                
+          </div>
+      
+
+</div>
+<!-- End add to cart -->
+
+

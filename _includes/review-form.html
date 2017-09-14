@@ -1,0 +1,58 @@
+<div class="row card-panel" id="review-form-content">
+  <h3 class="header">Submit your review</h3>
+  <form class="col s12" id="review-form">
+    <input type="hidden" name="sku" value="{{ page.sku }}">
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">account_circle</i>
+        <input  id="review_name" name="nickname" type="text" class="validate"  required="true">
+        <label for="review_name">Your Name</label>
+      </div>
+      <div class="input-field col s12">
+      <i class="material-icons prefix">email</i>
+        <input id="review_email" name="email" type="email" class="validate" required="true">
+        <label for="review_email">Email</label>
+        <p>Your email address on Mageplaza's store</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">chat_bubble_outline</i>
+        <input id="review_title" type="text" name="title" class="validate"  required="true">
+        <label for="review_title">Title</label>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">mode_edit</i>
+          <textarea id="review_content" name="detail" class="materialize-textarea"  required="true"></textarea>
+          <label for="review_content">Review Content</label>
+          <p>Plain text, no HTML tags.</p>
+        </div>
+    </div>
+
+    <div class="row">
+      <button  type="submit" class="waves-effect waves-green btn-large green right">Submit</button>
+
+    </div>
+  </form>
+</div>
+
+<script type="text/javascript">
+
+function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    
+  jQuery(document).ready(function(){
+    jQuery('#review_name').val(getParameterByName('name'));
+    jQuery('#review_email').val(getParameterByName('email'));
+  });
+</script>

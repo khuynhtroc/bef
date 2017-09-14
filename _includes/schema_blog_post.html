@@ -1,0 +1,45 @@
+{% assign review_count = 1 %}
+{% if (page.review_count) %}
+  {% assign review_count = page.review_count %}
+{% endif %}
+
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org/",
+	"@type": "BlogPosting",
+	"datePublished": "{{ page.date | date_to_xmlschema }}",
+	"headline": "{{ page.title }}",
+	"mainEntityOfPage": {
+		"@type": "WebPage",
+		"@id": "{{ site.url }}/{{ page.url }}"
+	},
+	"author": {
+		"@type": "Person",
+		"name": "Mageplaza"
+	},
+	"publisher": {
+		"@type": "Organization",
+		"name": "Mageplaza",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "",
+			"width": 0,
+			"height": 0
+		}
+	},
+	"dateModified": "{{ page.date | date_to_xmlschema }}",
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://www.mageplaza.com/skin/frontend/mageplaza/default/img/icon.png",
+		"width": 100,
+		"height": 100
+	},
+	"name": "{{ page.title }}",
+	"aggregateRating": {
+		"@type": "AggregateRating",
+		"ratingValue": "5",
+		"ratingCount": "{{ review_count }}"
+	}
+}
+
+</script>

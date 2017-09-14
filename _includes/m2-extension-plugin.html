@@ -1,0 +1,10 @@
+<span><strong>{{ page.plugin_title }}</strong></span>
+
+{% assign extensions = (site.products | where: "sku" , page.sku ) %}
+<ul class="highlight-features">
+	{% for extension in extensions %}
+		{% if(extension.layout == "m2plugin") %}
+		    <li><a href="{{ site.url }}{{ extension.url }}">{{ extension.title }}</a></li>
+	    {% endif %}
+	{% endfor %}
+</ul>
