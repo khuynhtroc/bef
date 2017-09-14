@@ -3,26 +3,18 @@ layout: post
 title: "9 lời khuyên hữu ích kiềm chế bực tức khi tranh luận"
 h1-title: "9 lời khuyên hữu ích kiềm chế bực tức khi tranh luận"
 description: "Giữ bình tĩnh khi tranh luận quả là một việc không dễ dàng chút nào! Tuy nhiên, bạn nên cố gắng kiểm soát tâm trạng bởi khi nóng giận, sự việc, mâu thuẫn có xu hướng trở nên gay gắt và bất lợi hơn. Một số lời khuyên sau có thể giúp bạn tích luỹ thêm kinh nghiệm giao tiếp cho bản thân."
-meta-title: "Magento 2 eBook - Module Development Cookbook"
-meta-description: "Magento 2 ebook Module development trend is increasing rapidly while Magento releases the official version"
-meta-keywords: "magento 2 ebook, magento 2 module development book"
-version: "1.0.0"
-user-version: no
-categories: kb
+meta-title: "9 lời khuyên hữu ích kiềm chế bực tức khi tranh luận"
+meta-description: "Giữ bình tĩnh khi tranh luận quả là một việc không dễ dàng chút nào! Tuy nhiên, bạn nên cố gắng kiểm soát tâm trạng bởi khi nóng giận, sự việc, mâu thuẫn có xu hướng trở nên gay gắt và bất lợi hơn. Một số lời khuyên sau có thể giúp bạn tích luỹ thêm kinh nghiệm giao tiếp cho bản thân."
+meta-keywords: "lời khuyên khi bực tức, bực tức khi tranh luận, kìm nén cơn giận"
+categories: Kĩ Năng Mềm
 topic: start
 topic-lable: "Kĩ Năng Mềm"
-permalink: "/magento-2-development-coobook-ebook/"
+permalink: "/9-loi-khuyen-huu-ich-kiem-che-buc-tuc-khi-tranh-luan.html"
 screenshots:
-sort_order: 20
-price: 0
 rating: 99
 review_count: 2
-sku: m2-development-ebook
 features:
 
-is_featured: true
-has_review: false
-features_url: "#features-section"
 ---
 
 ## 9 lời khuyên hữu ích kiềm chế bực tức khi tranh luận
@@ -60,3 +52,26 @@ Cách này hoàn toàn có thể giúp ích cho bạn. Nó làm cho bạn bình 
 ### 9. Tập trung vào một điều gì đó tích cực
 Cuối cùng, hãy tập trung vào một cái gì đó mang tính tích cực! Bạn có đang mong muốn điều gì không? Thứ gì là tích cực trong cuộc sống của bạn? Hãy quan tâm tới những thứ đó, thay vì giận dữ!
 
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "Thing",
+    "name": "Kĩ Năng Mềm"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Trọng Huỳnh"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "99",
+    "bestRating": "100" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SkillForLife"
+}
+</script>
