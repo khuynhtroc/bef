@@ -20,7 +20,7 @@
 
 	<!-- Document Title
 	============================================= -->
-	<title>Contact - Layout 2 | Canvas</title>
+	<title>Contact - Layout 2 with reCaptcha | Canvas</title>
 
 </head>
 
@@ -716,8 +716,8 @@
 
 					<nav>
 						<ul>
-							<li class="current"><a href="contact-2.html"><div>Default</div></a></li>
-							<li><a href="contact-2-recaptcha.html"><div>With reCaptcha</div></a></li>
+							<li><a href="contact-2.html"><div>Default</div></a></li>
+							<li class="current"><a href="contact-2-recaptcha.html"><div>With reCaptcha</div></a></li>
 							<li><a href="contact-2-file.html"><div>File Upload</div></a></li>
 							<li><a href="contact-2-inline.html"><div>Inline Notification</div></a></li>
 						</ul>
@@ -797,6 +797,13 @@
 
 								<div class="col_full hidden">
 									<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
+								</div>
+
+								<div class="col_full">
+
+									<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+									<div class="g-recaptcha" data-sitekey="6LfijgUTAAAAACPt-XfRbQszAKAJY0yZDjjhMUQT"></div>
+
 								</div>
 
 								<div class="col_full">
